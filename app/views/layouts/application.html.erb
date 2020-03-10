@@ -9,7 +9,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" >
+  <a class="navbar-brand" href="#">Simple Blog</a>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-link"><%= link_to "Home", home_path %></li>
+      <li class="nav-link"><%= link_to "Create Post", new_post_path %></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>
+ 
