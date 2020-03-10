@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     end
 
     def new
-
+        @post = Post.new
     end
 
     def show
@@ -20,6 +20,10 @@ class PostsController < ApplicationController
         else
             render 'new'
         end
+    end
+
+    def edit
+        @post = Post.find(params[:id])
     end
 
     private def post_params
